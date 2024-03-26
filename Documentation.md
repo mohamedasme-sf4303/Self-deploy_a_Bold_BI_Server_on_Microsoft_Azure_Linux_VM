@@ -24,7 +24,7 @@ To install and run the Bold BI server on a Microsoft Azure Linux virtual machine
  - **Password:** Enter your password, as you will need it to log in to the VM using Terminal.
  - **Inbound Ports:** Choose All port in check Box `HTTP,HTTPS and SSL`.
 
-![virtual machine](images/authu.png)
+![virtual machine](images/Authu.png)
  - Under the `Disks` blade, choose the VM OS disk type (SSD is recommended).
  
  ![virtual machine](images/SSD.png)
