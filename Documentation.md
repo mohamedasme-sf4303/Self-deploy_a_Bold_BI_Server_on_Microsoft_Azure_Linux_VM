@@ -15,8 +15,8 @@ To install and run the Bold BI server on a Microsoft Azure Linux Ubuntu virtual 
  - **Region:** Choose your preferred region for your VM.
 
 ![virtual machine](images/give_value.png)
- - **Image:** Choose `Ubuntu SeRver 20.04 LTS-x64 Gen2` image.
- - **Size:** Choose the VM size that meets our [system requirement](https://help.boldbi.com/deploying-bold-bi/overview/#hardware-requirements). For example, choose the `D2s_V3 size`, and then `click` Select.
+ - **Image:** Choose `Ubuntu Server 20.04 LTS-x64 Gen2` image.
+ - **Size:** Choose the VM size that meets our [system requirement](https://help.boldbi.com/deploying-bold-bi/overview/#hardware-requirements). For example, choose the `Standard_D2s_v3`.
 
 ![virtual machine](images/image.png)
  - **Username:** Enter your username, which you will use to log in to the VM using Terminal.
