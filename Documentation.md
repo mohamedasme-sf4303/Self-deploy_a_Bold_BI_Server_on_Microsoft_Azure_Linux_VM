@@ -7,7 +7,7 @@ To install and run the Bold BI server on a Microsoft Azure Linux Ubuntu virtual 
  ![Create Resource](images/create.png)
  - Click on `virtual machine`.
 
- ![virtual machine](images/Virtual_machine.png)
+ ![virtual machine](images/VM.png)
  - Provide the necessary administrative information for the new VM on the `Basics` blade.
  - **Virtual Machine Name:** Enter a name for your VM (max 15 characters).
  - **Subscription:** This VM should be associated with the Azure subscription.
@@ -25,8 +25,7 @@ To install and run the Bold BI server on a Microsoft Azure Linux Ubuntu virtual 
 
 ![virtual machine](images/Authu.png)
  - Under the `Disks` blade, choose the VM OS disk type (SSD is recommended).
- - cho
- 
+ - choose OS Disk size `256GiB` 
  ![virtual machine](images/SSD.png)
  - Click on `Review + create`
 
