@@ -40,5 +40,5 @@ To install and run the Bold BI server on a Microsoft Azure Linux virtual machine
  
  - Install the Bold BI in Linux Environment [help Link](https://help.boldbi.com/deploying-bold-bi/deploying-in-linux/installation-and-deployment/bold-bi-on-ubuntu/).
 
-![virtual machine](images/BoldBI.png)
+![virtual machine](images/BoldBi.png)
  - Follow the steps in the link to do the [application startup](https://help.boldbi.com/application-startup/).
