@@ -34,21 +34,21 @@ For installing and running the Bold BI server on a Microsoft Azure virtual machi
 
     ![Basic](images/self-vm-basic.png)
 
-**Virtual Machine Name:** Enter a name for your VM (max 15 characters).
+ - **Virtual Machine Name:** Enter a name for your VM (max 15 characters).
 
-**VM disk type:** Choose SSD/HDD as your convenience (SSD is recommended for better performance).
+ - **VM disk type:** Choose SSD/HDD as your convenience (SSD is recommended for better performance).
 
-**Size:** Choose the VM size that meets our [system requirement](/deploying-bold-bi/overview/#hardware-requirements). For example, choose the `D2s_V3` size, and then click `Select`.
+ - **Size:** Choose the VM size that meets our [system requirement](/deploying-bold-bi/overview/#hardware-requirements). For example, choose the `D2s_V3` size, and then click `Select`.
 
-**Username:** Enter your username, which you will use to log in to the VM using Remote Desktop Protocol (RDP).
+ - **Username:** Enter your username, which you will use to log in to the VM using Remote Desktop Protocol (RDP).
 
-**Password:** Enter your password, as you will need it to log in to the VM using RDP.
+ - **Password:** Enter your password, as you will need it to log in to the VM using RDP.
 
-**Subscription:** This VM should be associated with the Azure subscription.
+ - **Subscription:** This VM should be associated with the Azure subscription.
 
-**Resource group:** Choose `Create new` and enter the name of a new resource group to host the VM's resources.
+ - **Resource group:** Choose `Create new` and enter the name of a new resource group to host the VM's resources.
 
-**Region:** Choose your preferred region for your VM.
+ - **Region:** Choose your preferred region for your VM.
 
 * Under the `Disks` blade, choose the VM OS disk type (`SSD` is recommended).
 
@@ -120,37 +120,37 @@ This section provides instructions on how to install and run the Bold BI server 
     ![virtual machine](images/azure-ubuntu-vm.png)
  - Provide the necessary administrative information for the new VM on the `Basics` blade.
 
- **Virtual Machine Name:** Enter a name for your VM (max 15 characters).
+ - **Virtual Machine Name:** Enter a name for your VM (max 15 characters).
  
- **Subscription:** This VM should be associated with the Azure subscription.
+ - **Subscription:** This VM should be associated with the Azure subscription.
  
- **Resource group:** Choose `Create new` and enter the name of a new resource group to host the VM’s resources.
+ - **Resource group:** Choose `Create new` and enter the name of a new resource group to host the VM’s resources.
  
- **Region:** Choose your preferred region for your VM.
+ - **Region:** Choose your preferred region for your VM.
     
-![virtual machine](images/azure-ubuntu-vm-value.png)
- **Image:** Choose `Ubuntu Server 20.04 LTS-x64 Gen2` image.
+    ![virtual machine](images/azure-ubuntu-vm-value.png)
+ - **Image:** Choose `Ubuntu Server 20.04 LTS-x64 Gen2` image.
  
- **Size:** Choose the VM size that meets our [system requirement](https://help.boldbi.com/deploying-bold-bi/overview/#hardware-requirements). For example, choose the `Standard_D2s_v3`.
+ - **Size:** Choose the VM size that meets our [system requirement](https://help.boldbi.com/deploying-bold-bi/overview/#hardware-requirements). For example, choose the `Standard_D2s_v3`.
 
-![virtual machine](images/azure-ubuntu-vm-image.png)
+    ![virtual machine](images/azure-ubuntu-vm-image.png)
  
- **Username:** Enter your username, which you will use to log in to the VM using Terminal.
+ - **Username:** Enter your username, which you will use to log in to the VM using Terminal.
  
- **Password:** Enter your password, as you will need it to log in to the VM using Terminal.
+ - **Password:** Enter your password, as you will need it to log in to the VM using Terminal.
  
- **Inbound Ports:** Choose All port in check Box `HTTP,HTTPS and SSL`.
+ - **Inbound Ports:** Choose All port in check Box `HTTP,HTTPS and SSL`.
 
-![virtual machine](images/azure-ubuntu-vm-authentication.png)
+    ![virtual machine](images/azure-ubuntu-vm-authentication.png)
  - Under the `Disks` blade, choose the VM OS disk type (SSD is recommended).
  - Choose OS Disk size `256GiB` 
 
- ![virtual machine](images/azure-ubuntu-vm-storage.png)
+    ![virtual machine](images/azure-ubuntu-vm-storage.png)
  - Click on `Review + create`
 
 ## Installation and Running of the Bold BI Server ##
  - Connect the Azure Linux Ubuntu VM [help Link](https://learn.microsoft.com/en-us/azure/virtual-machines/linux-vm-connect?tabs=Windows).
  - Install the Bold BI in Linux Environment [help Link](https://help.boldbi.com/deploying-bold-bi/deploying-in-linux/installation-and-deployment/bold-bi-on-ubuntu/).
 
-![virtual machine](images/azure-ubuntu-vm-boldbi.png)
+    ![virtual machine](images/azure-ubuntu-vm-boldbi.png)
  - Follow the steps in the link to do the [application startup](https://help.boldbi.com/application-startup/).
