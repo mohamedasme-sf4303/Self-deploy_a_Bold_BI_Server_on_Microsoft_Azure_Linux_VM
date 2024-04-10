@@ -149,7 +149,7 @@ This section provides instructions on how to install and run the Bold BI server 
  - Click on `Review + create`
 
 ### Installation and Running of the Bold BI Server ##
- - Connect the Azure Linux Ubuntu VM [help Link](https://learn.microsoft.com/en-us/azure/virtual-machines/linux-vm-connect?tabs=Windows).
+ - Connect the Azure Linux VM [help Link](https://learn.microsoft.com/en-us/azure/virtual-machines/linux-vm-connect?tabs=Windows).
  - Install the Bold BI in Linux Environment [help Link](https://help.boldbi.com/deploying-bold-bi/deploying-in-linux/installation-and-deployment/bold-bi-on-ubuntu/).
 
     ![virtual machine](images/azure-ubuntu-vm-boldbi.png)
