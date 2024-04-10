@@ -16,7 +16,7 @@ For installing and running the Bold BI server on a Microsoft Azure virtual machi
 
 * Click on `Create a Resource`.
 
-    ![Create](images/self-vm-Create.png)
+    ![Create](images/azure-ubuntu-vm-create.png)
 
 * Under `Azure Market place`, select `Compute` option and click on `See all` featured.
 
@@ -114,7 +114,7 @@ This section provides instructions on how to install and run the Bold BI server 
  - Sign into the [Azure Portal](https://portal.azure.com/).
  - Click on `Create a Resource`.
 
-    ![Create Resource](images/self-vm-Create.png)
+    ![Create Resource](images/azure-ubuntu-vm-create.png)
  - Click on `virtual machine`.
 
     ![virtual machine](images/azure-ubuntu-vm.png)
