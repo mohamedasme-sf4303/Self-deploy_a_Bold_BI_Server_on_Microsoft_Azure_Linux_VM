@@ -40,6 +40,8 @@ def create_pg_database(
     )
     return pg_database
 
-resource_group = resource.ResourceGroup(f"{RESOURCE_NAME_PREFIX}-rg")
+resource_group = resource.ResourceGroup(f"{RESOURCE_NAME_PREFIX}-rg",
+  location="eastus"
+)
 sql_server = create_sql_server(resource_group)
 create_pg_database(resource_group, sql_server)
