@@ -3,10 +3,10 @@ import pulumi_azure_native.resources as resource
 from pulumi import Config, Output, export
 
 CONFIG = Config()
-RESOURCE_NAME_PREFIX = CONFIG.get("resource-name-prefix")
+RESOURCE_NAME_PREFIX = "ascid"
 SQL_SERVER_USER = "dbadmin"
 SQL_DB_NAME = "dtdb"
-SQL_SERVER_PASSWORD = CONFIG.require("sql-server-password")
+SQL_SERVER_PASSWORD = "cjecuygwdcc34we"
 
 def create_sql_server(resource_group: resource.ResourceGroup) -> postgresql.Server:
     sql_server_name = f"{RESOURCE_NAME_PREFIX}-postgresql"
@@ -33,7 +33,7 @@ def create_pg_database(
 ) -> postgresql.Database:
     pg_database = postgresql.Database(
         SQL_DB_NAME,
-        charset="UTF8"
+        charset="UTF8",
         database_name=SQL_DB_NAME,
         resource_group_name=resource_group.name,
         server_name=sql_server.name,
