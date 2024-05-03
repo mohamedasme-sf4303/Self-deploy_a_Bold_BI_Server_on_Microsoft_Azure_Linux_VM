@@ -158,7 +158,7 @@ primary_key = (
 )
 
 # Export the outputs
-potgresql_server_name = f"{sql_server.name}.postgres.database.azure.com"
+potgresql_server_name = sql_server.name.apply(lambda name: f"{name}.postgres.database.azure.com")
 pulumi.export('vm_name', ubuntu_vm.name)
 pulumi.export('vm_ip_address', public_ip.ip_address)
 pulumi.export('vm_username', admin_user)
