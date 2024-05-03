@@ -25,7 +25,6 @@ if selected_plan == "plan1":
     postgresql_sku_name = "Standard_D2ads_v5"
     postgresql_disk_gb = 128
     postgresql_tier = "GeneralPurpose"
-
 else:
     pulumi.log.error("Invalid plan selected. Please select either 'plan1' or 'plan2'.")
     pulumi.quit()
@@ -139,9 +138,12 @@ account = storage.StorageAccount(
 )
 
 # Create an Azure resource (container)
-container = storage.Container(container_name,
-    storage_account_name=storage_account.name,
-    container_access_type='private'
+container = storage.BlobContainer(
+    container_name,
+    account_name=storage_account.name,
+    container_name=container_name,
+    resource_group_name=resource_group.name,
+    public_access=storage.PublicAccess.NONE
 )
 
 # Export the primary key of the Storage Account
@@ -160,8 +162,11 @@ pulumi.export('vm_name', ubuntu_vm.name)
 pulumi.export('vm_ip_address', public_ip.ip_address)
 pulumi.export('vm_username', admin_user)
 pulumi.export('vm_password', admin_password)
+echo "---------------------------------------"
 pulumi.export("potgresql_name", sql_server.name)
 pulumi.export("potgresql_password", sql_server_password)
+echo "---------------------------------------"
 pulumi.export("storage_account_name", storage_account_name)
-pulumi.export("container name", container_name)
+pulumi.export("container name", container.name)
 pulumi.export("primary_storage_key", primary_key)
+echo "---------------------------------------"
