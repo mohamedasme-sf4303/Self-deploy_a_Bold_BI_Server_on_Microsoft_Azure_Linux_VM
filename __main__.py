@@ -1,3 +1,4 @@
+
 import pulumi
 from pulumi_azure_native import storage, resources, compute, network, dbforpostgresql
 import random
@@ -24,6 +25,12 @@ if selected_plan == "plan1":
     selected_vm_storage_size = 256
     postgresql_sku_name = "Standard_D2ads_v5"
     postgresql_disk_gb = 128
+    postgresql_tier = "GeneralPurpose"
+elif selected_plan == "plan2":
+    selected_vm_size = "Standard_D8as_v5"
+    selected_vm_storage_size = 512
+    postgresql_sku_name = "Standard_D4ads_v5"
+    postgresql_disk_gb = 256
     postgresql_tier = "GeneralPurpose"
 else:
     pulumi.log.error("Invalid plan selected. Please select either 'plan1' or 'plan2'.")
