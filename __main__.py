@@ -158,16 +158,16 @@ primary_key = (
 )
 
 # Export the outputs
-print("---------------------------------------")
+
 pulumi.export('vm_name', ubuntu_vm.name)
 pulumi.export('vm_ip_address', public_ip.ip_address)
 pulumi.export('vm_username', admin_user)
 pulumi.export('vm_password', admin_password)
-print("---------------------------------------")
+pulumi.export('-----------------------------')
 pulumi.export("potgresql_name", sql_server.name)
 pulumi.export("potgresql_password", sql_server_password)
-print("---------------------------------------")
+pulumi.export('-----------------------------')
 pulumi.export("storage_account_name", account.name)
 pulumi.export("container name", container.name)
 pulumi.export("primary_storage_key", primary_key)
-print("---------------------------------------")
+pulumi.export('-----------------------------')
