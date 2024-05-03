@@ -13,12 +13,11 @@ company_name = config.require("companyName")
 selected_plan = config.require("plan")
 resource_group_name = f"{company_name}resources"
 storage_account_name = f"{company_name.lower()}storage"
-RESOURCE_NAME_PREFIX = company_name
-SQL_SERVER_USER = f"{company_name}admin"
-SQL_DB_NAME = company_name
+container_name = f'{company_name}container'
+sql_server_user = f"{company_name}admin"
 admin_user = f"{company_name}admin"
 admin_password = generate_password(16)
-SQL_SERVER_PASSWORD = generate_password(16)
+sql_server_password = generate_password(16)
 
 if selected_plan == "plan1":
     selected_vm_size = "Standard_D4as_v5"
@@ -26,6 +25,7 @@ if selected_plan == "plan1":
     postgresql_sku_name = "Standard_D2ads_v5"
     postgresql_disk_gb = 128
     postgresql_tier = "GeneralPurpose"
+
 else:
     pulumi.log.error("Invalid plan selected. Please select either 'plan1' or 'plan2'.")
     pulumi.quit()
@@ -106,8 +106,8 @@ sql_server = dbforpostgresql.Server(
     sql_server_name,
     server_name=sql_server_name,
     resource_group_name=resource_group.name,
-    administrator_login=SQL_SERVER_USER,
-    administrator_login_password=SQL_SERVER_PASSWORD,
+    administrator_login=sql_server_user,
+    administrator_login_password=sql_server_password,
     create_mode="Default",
     storage=dbforpostgresql.StorageArgs(storage_size_gb=postgresql_disk_gb),
     backup=dbforpostgresql.BackupArgs(
@@ -138,6 +138,12 @@ account = storage.StorageAccount(
     kind=storage.Kind.STORAGE_V2,
 )
 
+# Create an Azure resource (container)
+container = storage.Container(container_name,
+    storage_account_name=storage_account.name,
+    container_access_type='private'
+)
+
 # Export the primary key of the Storage Account
 primary_key = (
     pulumi.Output.all(resource_group.name, account.name)
@@ -155,6 +161,7 @@ pulumi.export('vm_ip_address', public_ip.ip_address)
 pulumi.export('vm_username', admin_user)
 pulumi.export('vm_password', admin_password)
 pulumi.export("potgresql_name", sql_server.name)
-pulumi.export("potgresql_password", SQL_SERVER_PASSWORD)
+pulumi.export("potgresql_password", sql_server_password)
 pulumi.export("storage_account_name", storage_account_name)
+pulumi.export("container name", container_name)
 pulumi.export("primary_storage_key", primary_key)
