@@ -140,7 +140,7 @@ account = storage.StorageAccount(
 # Create an Azure resource (container)
 container = storage.BlobContainer(
     container_name,
-    account_name=storage_account.name,
+    account_name=account.name,
     container_name=container_name,
     resource_group_name=resource_group.name,
     public_access=storage.PublicAccess.NONE
@@ -167,7 +167,7 @@ print("---------------------------------------")
 pulumi.export("potgresql_name", sql_server.name)
 pulumi.export("potgresql_password", sql_server_password)
 print("---------------------------------------")
-pulumi.export("storage_account_name", storage_account_name)
+pulumi.export("storage_account_name", account.name)
 pulumi.export("container name", container.name)
 pulumi.export("primary_storage_key", primary_key)
 print("---------------------------------------")
