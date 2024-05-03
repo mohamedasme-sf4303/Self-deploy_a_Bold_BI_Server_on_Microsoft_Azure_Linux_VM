@@ -158,12 +158,13 @@ primary_key = (
 )
 
 # Export the outputs
-
+potgresql_server_name = f"{sql_server.name}.postgres.database.azure.com"
 pulumi.export('vm_name', ubuntu_vm.name)
 pulumi.export('vm_ip_address', public_ip.ip_address)
 pulumi.export('vm_username', admin_user)
 pulumi.export('vm_password', admin_password)
 pulumi.export("potgresql_name", sql_server.name)
+pulumi.export("potgresql_server_name", potgresql_server_name)
 pulumi.export("potgresql_password", sql_server_password)
 pulumi.export("storage_account_name", account.name)
 pulumi.export("container name", container.name)
